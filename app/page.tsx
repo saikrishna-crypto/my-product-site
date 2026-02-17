@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('photoshoot');
   const [selectedProduct, setSelectedProduct] = useState(null);
