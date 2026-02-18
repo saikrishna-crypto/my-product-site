@@ -143,17 +143,23 @@ export default function Home() {
     marketing: 'Marketing Creative',
   };
 
-  const Banner = () => (
-    <div className="w-full mb-10" style={{ backgroundColor: '#58595b' }}>
-      <div className="max-w-7xl mx-auto px-4 py-5 flex items-center justify-center">
-        <img
-          src="https://cdn.prod.website-files.com/670cac49528bf16270018416/670cac49528bf162700185f8_HhuJ7pGNhgP9jli6VC-uY-transformed-p-500.png"
-          alt="Trends Footwear"
-          className="h-14 object-contain brightness-0 invert"
-        />
+  const Banner = () => {
+    const bannerData = products[0] || {};
+    const bannerLogo = bannerData.banner_logo || 'https://cdn.prod.website-files.com/670cac49528bf16270018416/670cac49528bf162700185f8_HhuJ7pGNhgP9jli6VC-uY-transformed-p-500.png';
+    const bannerBgColor = bannerData.banner_background_color || '#58595b';
+    
+    return (
+      <div className="w-full mb-10" style={{ backgroundColor: bannerBgColor }}>
+        <div className="max-w-7xl mx-auto px-4 py-5 flex items-center justify-center">
+          <img
+            src={bannerLogo}
+            alt="Brand Logo"
+            className="h-14 object-contain brightness-0 invert"
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const Lightbox = () => (
     <div
