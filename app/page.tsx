@@ -32,8 +32,8 @@ export default function Home() {
     }
   };
 
-  const getImagesForCategory = (product, category) => {
-    const keys = {
+const getImagesForCategory = (product: any, category: string) => {
+  const keys = {
       photoshoot: ['photoshoot_1', 'photoshoot_2', 'photoshoot_3', 'photoshoot_4', 'photoshoot_5'],
       lifestyle: ['lifestyle_1', 'lifestyle_2', 'lifestyle_3', 'lifestyle_4', 'lifestyle_5'],
       marketing: ['marketing_1', 'marketing_2', 'marketing_3', 'marketing_4', 'marketing_5'],
