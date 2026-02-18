@@ -38,8 +38,7 @@ const getImagesForCategory = (product: any, category: string) => {
       lifestyle: ['lifestyle_1', 'lifestyle_2', 'lifestyle_3', 'lifestyle_4', 'lifestyle_5'],
       marketing: ['marketing_1', 'marketing_2', 'marketing_3', 'marketing_4', 'marketing_5'],
     };
-    return keys[category].map((key) => product[key]).filter(Boolean);
-  };
+return keys[category as keyof typeof keys].map((key) => product[key]).filter(Boolean);  };
 
   const openProduct = (product) => {
     setSelectedProduct(product);
